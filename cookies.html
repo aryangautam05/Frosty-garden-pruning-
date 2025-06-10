@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cookies Policy - Frosty Garden Pruning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-text-primary: #374151;
+      --color-text-secondary: #6b7280;
+      --color-accent: #2d6a4f;
+      --color-accent-light: #95d5b2;
+      --color-accent-dark: #1b4332;
+      --color-frosty-blue: #a8dadc;
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+
+      --radius: 0.75rem;
+      --shadow-light: rgba(0,0,0,0.08);
+      --shadow-hover: rgba(45,106,79,0.35);
+      --transition-speed: 0.3s;
+      --dialog-background: rgba(0,0,0,0.6);
+      --dialog-color: #fff;
+      --dialog-radius: 0.75rem;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+      padding-bottom: 150px; /* extra so cookie dialog does not hide content */
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+
+    a:hover, a:focus {
+      color: var(--color-accent-dark);
+      outline: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 1000;
+      box-shadow: 0 2px 4px var(--shadow-light);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.75rem;
+      color: var(--color-accent-dark);
+      user-select: none;
+      font-family: var(--font-heading);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      align-items: center;
+    }
+
+    .nav-links a {
+      padding: 0.4rem 0;
+      position: relative;
+      font-size: 1rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--color-accent);
+      transition: width var(--transition-speed);
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus::after {
+      width: 100%;
+    }
+
+    main {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 6rem;
+      background: linear-gradient(135deg, var(--color-frosty-blue) 0%, var(--color-accent-light) 100%);
+      border-radius: var(--radius);
+      margin-bottom: 4rem;
+      box-shadow: 0 8px 16px rgba(45,106,79,0.15);
+      color: var(--color-accent-dark);
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 3.5rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem;
+      color: var(--color-accent-dark);
+    }
+
+    /* Cookies Content */
+    .cookies-content {
+      max-width: 960px;
+      margin: 0 auto 6rem;
+      color: var(--color-text-primary);
+    }
+
+    .cookies-content h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-accent-dark);
+      margin-top: 3rem;
+    }
+
+    .cookies-content h3 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      color: var(--color-accent-dark);
+    }
+
+    .cookies-content p,
+    .cookies-content ul,
+    .cookies-content li {
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+      text-align: justify;
+      color: var(--color-text-secondary);
+    }
+
+    .cookies-content ul {
+      padding-left: 1.5rem;
+      list-style-type: disc;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f9fafb;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: var(--color-text-secondary);
+      font-size: 1rem;
+      user-select: none;
+      border-top: 1px solid #e5e7eb;
+      position: relative;
+      z-index: 2;
+    }
+
+    footer address {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-accent-dark);
+      margin-top: 0.5rem;
+    }
+
+    footer .contact-info {
+      margin-top: 0.75rem;
+      font-weight: 600;
+      color: var(--color-accent-dark);
+    }
+
+    /* Cookie Consent Dialog */
+    #cookie-consent {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-accent-dark);
+      color: var(--dialog-color);
+      border-radius: var(--dialog-radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      padding: 1.5rem 2rem;
+      max-width: 680px;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      z-index: 9999;
+      user-select: none;
+      flex-wrap: wrap;
+    }
+
+    #cookie-consent p {
+      flex: 1 1 350px;
+      margin: 0;
+      color: var(--dialog-color);
+      line-height: 1.4;
+      user-select: text;
+    }
+
+    #cookie-consent button {
+      background-color: var(--color-accent-light);
+      color: var(--color-accent-dark);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius);
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color var(--transition-speed), transform var(--transition-speed);
+      user-select: none;
+      min-width: 110px;
+      flex-shrink: 0;
+    }
+
+    #cookie-consent button:hover,
+    #cookie-consent button:focus {
+      background-color: var(--color-accent);
+      outline: none;
+      transform: scale(1.05);
+    }
+
+    #cookie-consent .decline-btn {
+      background-color: transparent;
+      border: 2px solid var(--color-accent-light);
+      color: var(--color-accent-light);
+    }
+
+    #cookie-consent .decline-btn:hover,
+    #cookie-consent .decline-btn:focus {
+      background-color: var(--color-accent-light);
+      color: var(--color-accent-dark);
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      #cookie-consent {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1.25rem;
+        gap: 1rem;
+      }
+      #cookie-consent p {
+        flex: 1 1 100%;
+      }
+      #cookie-consent button {
+        width: 100%;
+        min-width: unset;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .cookies-content h2 {
+        font-size: 2rem;
+      }
+
+      .cookies-content h3 {
+        font-size: 1.375rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary navigation">
+        <div class="logo" tabindex="0">Frosty<span style="color:var(--color-accent)">Garden</span></div>
+        <div class="nav-links">
+         <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" role="banner" aria-label="Cookies Policy">
+      <h1>Cookies Policy</h1>
+      <p>This Cookies Policy explains how Frosty Garden Pruning uses cookies and similar tracking technologies on our website to enhance your browsing experience, analyze site traffic, deliver personalized content, and comply with legal obligations.</p>
+    </section>
+    <section class="cookies-content" aria-label="Cookies Policy Content">
+
+      <h2>Introduction</h2>
+      <p>Cookies are tiny text files stored on your device by websites you visit. They allow websites to recognize you, remember preferences, and collect analytics data.</p>
+      <p>At Frosty Garden Pruning, we use cookies to ensure a smooth, personalized user experience and to understand how our site is used.</p>
+      <p>Below is detailed information about the types of cookies we use, how we use them, your rights, and how to manage your preferences.</p>
+
+      <h2>What Are Cookies?</h2>
+      <p>Cookies are small data files that store information about your visit and preferences. They provide benefits such as:</p>
+      <ul>
+        <li>Keeping you logged in during sessions</li>
+        <li>Remembering your language or region preferences</li>
+        <li>Tracking visitor behavior for site improvements</li>
+        <li>Delivering relevant marketing and advertisements tailored to your interests</li>
+      </ul>
+      <p>Cookies are safe and cannot carry viruses or malware.</p>
+
+      <h2>Types of Cookies We Use</h2>
+      <h3>Strictly Necessary Cookies</h3>
+      <p>These cookies are essential for website operation and security.</p>
+      <p>Examples include session management and authentication cookies.</p>
+
+      <h3>Performance Cookies</h3>
+      <p>Performance cookies collect anonymous usage data to help optimize site performance.</p>
+      <p>They tell us which pages are most visited and if there are issues.</p>
+
+      <h3>Functionality Cookies</h3>
+      <p>These cookies remember your preferences for a more tailored browsing experience.</p>
+
+      <h3>Targeting and Advertising Cookies</h3>
+      <p>These cookies are used to deliver relevant ads and measure advertising effectiveness.</p>
+
+      <h2>Third-Party Cookies</h2>
+      <p>We use trusted third-party services such as Google Analytics, advertising networks, and social media platforms. Their use of cookies is subject to their privacy policies.</p>
+
+      <h2>How We Use Cookies</h2>
+      <ul>
+        <li>To provide essential website functionality and navigation stability</li>
+        <li>To personalize content and user experience</li>
+        <li>To analyze site usage and trends</li>
+        <li>To enhance security and prevent fraud</li>
+        <li>To deliver customized marketing and advertising</li>
+      </ul>
+
+      <h2>Your Cookie Choices</h2>
+      <p>Upon your first visit, our cookie consent dialog will appear allowing you to either accept or decline non-essential cookies.</p>
+      <p>You can change your preferences at any time via your browser settings or by contacting us.</p>
+
+      <h2>Managing Cookies in Browsers</h2>
+      <p>You can control cookies through your browser settings. Disabling cookies may reduce website functionality.</p>
+      <ul>
+        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome Cookie Settings</a></li>
+        <li><a href="https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener">Mozilla Firefox Cookie Settings</a></li>
+        <li><a href="https://support.apple.com/en-us/HT201265" target="_blank" rel="noopener">Apple Safari Cookies</a></li>
+        <li><a href="https://support.microsoft.com/en-us/help/4027947/windows-delete-cookies" target="_blank" rel="noopener">Microsoft Edge Cookies</a></li>
+      </ul>
+
+      <h2>Legal Compliance and Regulations</h2>
+      <p>We comply with global privacy laws like GDPR and CCPA that regulate cookie usage and require transparency and user consent.</p>
+
+      <h2>Duration of Cookies</h2>
+      <p>Cookies may remain on your device for a session or persist for years depending on their purpose.</p>
+
+      <h2>Do Not Track</h2>
+      <p>Our website currently does not respond to Do Not Track signals due to lack of accepted standards in the industry.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>This Cookies Policy may change periodically. We recommend checking this page regularly for updates.</p>
+
+      <h2>Contact Us</h2>
+      <p>If you have questions about our cookie policy or wish to withdraw consent, please contact us:</p>
+      <p><strong>Email:</strong> privacy@frostygardenpruning.com</p>
+      <p><strong>Phone:</strong> +1 (212) 555-0199</p>
+      <p><strong>Address:</strong> 400 Broome St, New York, NY 10013, USA</p>
+
+      <h2>Detailed Explanations for Transparency</h2>
+      <h3>Understanding How Cookies Track You</h3>
+      <p>Cookies can store information like your IP address, pages visited, time spent on our site, and interaction patterns.</p>
+      <p>This information helps us to identify usage trends, improving the website’s design and content to suit your needs.</p>
+
+      <h3>Examples of Cookie Use in Website Features</h3>
+      <p>For example, cookies help ensure your shopping cart retains items between pages and your login status is remembered.</p>
+      <p>Cookies also allow us to show you content relevant to your location or language preferences.</p>
+
+      <h3>Advertising and Marketing Cookies</h3>
+      <p>Advertising cookies track your visits across sites to show you ads tailored to your interests.</p>
+      <p>These cookies may also be used to limit the number of times you see an ad and to measure campaign effectiveness.</p>
+
+      <h3>Your Privacy and Cookie Choices</h3>
+      <p>You have complete control over cookie settings. Our cookie consent banner explains these choices clearly, allowing you to opt in or out.</p>
+
+      <h3>Cookie Storage and Security</h3>
+      <p>Cookies do not access your device files and cannot install malware; they only store text information.</p>
+      <p>We secure our website with HTTPS encryption to protect the data exchanged between your browser and our server.</p>
+
+      <h3>How to Delete Cookies</h3>
+      <p>You can delete cookies via your browser settings or use browser extensions designed for cookie management.</p>
+
+      <h3>Cookies on Mobile Devices</h3>
+      <p>Cookies operate similarly on mobile browsers and apps to offer consistent experiences across devices.</p>
+
+      <h3>Future Cookie Usage</h3>
+      <p>We continually evaluate new technologies to ensure your privacy is respected and that our site functions optimally.</p>
+
+      <h3>Glossary</h3>
+      <p><strong>Cookie:</strong> Small data file placed in your browser.</p>
+      <p><strong>Session Cookie:</strong> Temporary cookie deleted after browsing session.</p>
+      <p><strong>Persistent Cookie:</strong> Remains on your device for a set time.</p>
+      <p><strong>First-Party Cookie:</strong> Set by Frosty Garden Pruning.</p>
+      <p><strong>Third-Party Cookie:</strong> Set by external ad or analytics services.</p>
+
+      <h3>Thank You</h3>
+      <p>We appreciate your trust in Frosty Garden Pruning. We remain committed to your privacy and a transparent, respectful user experience.</p>
+
+    </section>
+  </main>
+
+  <footer id="contact" aria-label="Contact information">
+    <div class="container">
+      <address>400 Broome St, New York, NY 10013, USA</address>
+      <div class="contact-info">Phone: +1 (212) 555-0199</div>
+      <p>&copy; 2024 Frosty Garden Pruning. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent dialog" aria-modal="true" tabindex="0">
+    <p>We use cookies to enhance your browsing experience, analyze site traffic, and deliver personalized content. By continuing to use our site, you consent to our use of cookies.</p>
+    <button id="accept-cookies" aria-label="Accept cookies">Accept</button>
+    <button id="decline-cookies" class="decline-btn" aria-label="Decline cookies">Decline</button>
+  </div>
+
+  <script>
+    (function() {
+      const consentName = 'fgp_cookie_consent';
+      const consentExpiryDays = 365;
+
+      function setCookie(name, value, days) {
+        const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
+        document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/; SameSite=Lax';
+      }
+      function getCookie(name) {
+        const value = "; " + document.cookie;
+        const parts = value.split("; " + name + "=");
+        if (parts.length === 2) return decodeURIComponent(parts.pop().split(";").shift());
+      }
+
+      function hideConsent() {
+        const el = document.getElementById('cookie-consent');
+        if(el) el.style.display = 'none';
+      }
+
+      const consent = getCookie(consentName);
+      if (consent === 'accepted' || consent === 'declined') {
+        hideConsent();
+      }
+
+      document.getElementById('accept-cookies').addEventListener('click', () => {
+        setCookie(consentName, 'accepted', consentExpiryDays);
+        hideConsent();
+        // Enable tracking or analytics scripts here if needed
+      });
+
+      document.getElementById('decline-cookies').addEventListener('click', () => {
+        setCookie(consentName, 'declined', consentExpiryDays);
+        hideConsent();
+        // Disable or block tracking scripts here if needed
+      });
+    })();
+  </script>
+</body>
+</html>
+
