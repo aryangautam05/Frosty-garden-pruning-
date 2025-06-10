@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy - Frosty Garden Pruning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-text-primary: #374151;
+      --color-text-secondary: #6b7280;
+      --color-accent: #2d6a4f;
+      --color-accent-light: #95d5b2;
+      --color-accent-dark: #1b4332;
+      --color-frosty-blue: #a8dadc;
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+
+      --radius: 0.75rem;
+      --shadow-light: rgba(0,0,0,0.08);
+      --shadow-hover: rgba(45,106,79,0.35);
+      --transition-speed: 0.3s;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+
+    a:hover, a:focus {
+      color: var(--color-accent-dark);
+      outline: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 1000;
+      box-shadow: 0 2px 4px var(--shadow-light);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.75rem;
+      color: var(--color-accent-dark);
+      user-select: none;
+      font-family: var(--font-heading);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      align-items: center;
+    }
+
+    .nav-links a {
+      padding: 0.4rem 0;
+      position: relative;
+      font-size: 1rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--color-accent);
+      transition: width var(--transition-speed);
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus::after {
+      width: 100%;
+    }
+
+    main {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 6rem;
+      background: linear-gradient(135deg, var(--color-frosty-blue) 0%, var(--color-accent-light) 100%);
+      border-radius: var(--radius);
+      margin-bottom: 4rem;
+      box-shadow: 0 8px 16px rgba(45,106,79,0.15);
+      color: var(--color-accent-dark);
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 3.5rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem;
+      color: var(--color-accent-dark);
+    }
+
+    /* Privacy Content */
+    .privacy-content {
+      max-width: 960px;
+      margin: 0 auto 5rem;
+      color: var(--color-text-primary);
+    }
+
+    .privacy-content h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-accent-dark);
+      margin-top: 3rem;
+    }
+
+    .privacy-content h3 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      color: var(--color-accent-dark);
+    }
+
+    .privacy-content p,
+    .privacy-content ul,
+    .privacy-content li {
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+      text-align: justify;
+      color: var(--color-text-secondary);
+    }
+
+    .privacy-content ul {
+      padding-left: 1.5rem;
+      list-style-type: disc;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f9fafb;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: var(--color-text-secondary);
+      font-size: 1rem;
+      user-select: none;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    footer address {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-accent-dark);
+      margin-top: 0.5rem;
+    }
+
+    footer .contact-info {
+      margin-top: 0.75rem;
+      font-weight: 600;
+      color: var(--color-accent-dark);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .privacy-content h2 {
+        font-size: 2rem;
+      }
+
+      .privacy-content h3 {
+        font-size: 1.375rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary navigation">
+        <div class="logo" tabindex="0">Frosty<span style="color:var(--color-accent)">Garden</span></div>
+        <div class="nav-links">
+         <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" role="banner" aria-label="Privacy Policy">
+      <h1>Privacy Policy</h1>
+      <p>Your privacy is critically important to us. This Privacy Policy explains how Frosty Garden Pruning collects, uses, and safeguards your information to ensure transparency and trust.</p>
+    </section>
+    <section class="privacy-content" aria-label="Privacy Policy Content">
+      <h2>Introduction</h2>
+      <p>At Frosty Garden Pruning (“we”, “us”, or “our”), protecting your personal information and respecting your privacy are paramount. This Privacy Policy explains the types of information we collect, how we use it, and the choices you have regarding your information when you use our services or visit our website.</p>
+      <p>We encourage you to read this policy carefully. By using our website or services, you agree to the practices described herein.</p>
+
+      <h2>Information We Collect</h2>
+      <h3>Personal Identifiable Information</h3>
+      <p>We collect information you voluntarily provide when using our services or contacting us. This may include:</p>
+      <ul>
+        <li>Full name</li>
+        <li>Email address</li>
+        <li>Telephone number</li>
+        <li>Mailing or billing address</li>
+        <li>Payment information</li>
+        <li>Service preferences or requests</li>
+      </ul>
+      <p>This information is essential to create and manage your service requests, provide support, and communicate with you effectively.</p>
+
+      <h3>Usage Information</h3>
+      <p>We automatically collect certain data when you visit our website, including but not limited to:</p>
+      <ul>
+        <li>IP address</li>
+        <li>Browser type and version</li>
+        <li>Operating system</li>
+        <li>Pages visited and interactions</li>
+        <li>Referring URL</li>
+        <li>Time and date of access</li>
+      </ul>
+      <p>This data helps us analyze website traffic and improve user experience.</p>
+
+      <h3>Cookies and Tracking</h3>
+      <p>Cookies are small data files stored on your device to enhance site performance and functionality. We use cookies to:</p>
+      <ul>
+        <li>Remember your preferences and personalize your experience</li>
+        <li>Analyze website usage and visitor behaviour</li>
+        <li>Support marketing and advertising efforts</li>
+      </ul>
+      <p>You can manage or disable cookies through your browser settings; however, doing so may affect the functionality of some website features.</p>
+
+      <h3>Third-Party Technologies</h3>
+      <p>We may use third-party services such as Google Analytics, advertising partners, or social media plugins to better understand user interaction and provide tailored content. These service providers have their privacy policies that govern their use of collected data.</p>
+
+      <h2>How We Use Your Information</h2>
+      <p>Your information is used for the following purposes:</p>
+      <ul>
+        <li>To provide, maintain, and improve our services</li>
+        <li>To communicate with you regarding your inquiries, requests, or purchases</li>
+        <li>To personalize your experience and tailor content, offers, and recommendations</li>
+        <li>To protect against fraud, abuse, or unauthorized transactions</li>
+        <li>To comply with legal obligations and enforce our rights</li>
+        <li>To send newsletters and promotional materials (with your consent)</li>
+      </ul>
+
+      <h2>Information Sharing and Disclosure</h2>
+      <p>We do not sell or rent your personal information to third parties. Information may be shared with:</p>
+      <ul>
+        <li>Service providers who work on our behalf (e.g., payment processors, IT providers) under strict confidentiality obligations</li>
+        <li>Law enforcement or government authorities as required by law or regulation</li>
+        <li>In connection with business transfers such as acquisitions, mergers, or asset sales</li>
+      </ul>
+      <p>Any third party accessing your information is required to safeguard it as per applicable laws and agreements.</p>
+
+      <h2>Data Security</h2>
+      <p>We take proactive measures to protect your data, including:</p>
+      <ul>
+        <li>Using encryption technologies for data transmission</li>
+        <li>Securing servers and databases where data is stored</li>
+        <li>Restricting access to personal data to authorized personnel only</li>
+        <li>Conducting regular security audits and assessments</li>
+      </ul>
+      <p>Despite these efforts, no internet transmission is completely secure, so we cannot guarantee absolute security.</p>
+
+      <h2>Data Retention</h2>
+      <p>We retain your personal data only for the time necessary to fulfill the purposes outlined in this policy unless a longer retention period is required or permitted by law.</p>
+      <p>When data is no longer needed, we securely delete or anonymize it.</p>
+
+      <h2>Your Rights and Choices</h2>
+      <p>Depending on your jurisdiction, you may have the following rights concerning your personal data:</p>
+      <ul>
+        <li>Access to the personal information we hold about you</li>
+        <li>Correction or updating of inaccurate information</li>
+        <li>Request deletion or restriction of certain processing activities</li>
+        <li>Object to processing for direct marketing purposes</li>
+        <li>Data portability where applicable</li>
+        <li>Withdraw consent where we rely on it as a legal basis</li>
+      </ul>
+      <p>You can exercise these rights by contacting us. We will respond within the timeframes established by applicable law.</p>
+
+      <h2>Children’s Privacy</h2>
+      <p>Our website and services are not intended for children under the age of 13 (or the applicable age of majority). We do not knowingly collect personal data from children. If you believe we have inadvertently collected data from a child, please contact us immediately so that we can delete it.</p>
+
+      <h2>International Data Transfers</h2>
+      <p>Personal data collected through our website and services may be transferred to, processed in, and stored in the United States where our servers or service providers reside. By using our services, you consent to such transfers that may involve different data protection laws than those in your jurisdiction.</p>
+
+      <h2>Cookies and Tracking Technologies in Detail</h2>
+      <p>Cookies enhance your experience by remembering your preferences and login information. There are different types of cookies we use:</p>
+      <ul>
+        <li><strong>Session Cookies:</strong> Temporary cookies that expire when you close your browser.</li>
+        <li><strong>Persistent Cookies:</strong> Remain on your device until they expire or you delete them, used for remembering preferences.</li>
+        <li><strong>Third-Party Cookies:</strong> Set by third-party services such as analytics platforms or advertisers.</li>
+      </ul>
+      <p>You may control cookie usage through your browser settings and opt out of some tracking technologies via industry opt-out tools.</p>
+
+      <h2>Legal Basis for Processing</h2>
+      <p>Where applicable, we will process your personal data based on one or more of the following legal bases:</p>
+      <ul>
+        <li>Your consent</li>
+        <li>Performance of a contract with you</li>
+        <li>Compliance with legal obligations</li>
+        <li>Our legitimate interests, balanced against your rights</li>
+      </ul>
+
+      <h2>How We Handle Data Breaches</h2>
+      <p>In the unlikely event of a data breach involving your personal information, we have procedures in place to promptly investigate and mitigate the breach and to notify you and any relevant authorities as required by law.</p>
+
+      <h2>Policy Updates and Notification</h2>
+      <p>We may update this Privacy Policy from time to time. Significant changes will be indicated on our website and where appropriate, notified directly. Your continued use of our services constitutes acceptance of any updated policy.</p>
+
+      <h2>Contact Information</h2>
+      <p>If you have any questions, concerns, or requests regarding your privacy or this privacy policy, please contact us:</p>
+      <p><strong>Email:</strong> privacy@frostygardenpruning.com</p>
+      <p><strong>Phone:</strong> +1 (212) 555-0199</p>
+      <p><strong>Address:</strong> 400 Broome St, New York, NY 10013, USA</p>
+
+      <h2>Additional Privacy Topics</h2>
+
+      <h3>Marketing Communications and Opt-Out</h3>
+      <p>If you subscribe to our newsletters or promotional emails, we use your contact information to send you relevant marketing content. You can unsubscribe at any time via the unsubscribe link included in communications or by contacting us directly. We do not share your contact information with third parties for their marketing purposes without your explicit consent.</p>
+
+      <h3>Privacy of Payment Information</h3>
+      <p>We use trusted payment processors to handle your transactions securely. Payment information is processed directly by our payment providers and is not stored or accessible by Frosty Garden Pruning.</p>
+
+      <h3>Links to Other Websites</h3>
+      <p>Our website may contain links to external sites. We are not responsible for the privacy practices or content of these third-party websites. We encourage you to review the privacy policies of any site you visit.</p>
+
+      <h3>Use of Google Analytics and Other Tools</h3>
+      <p>We utilize Google Analytics to better understand website usage and improve our offerings. Google Analytics collects data about visits and user interactions. We have disabled data sharing settings and implemented IP anonymization to protect user privacy. You can opt out of Google Analytics tracking by installing the Google Analytics opt-out browser add-on.</p>
+
+      <h3>Data Subject Rights Under GDPR</h3>
+      <p>If you are located in the European Economic Area ("EEA"), you are entitled under the General Data Protection Regulation ("GDPR") to certain rights regarding your personal data, including:</p>
+      <ul>
+        <li>The right to access your data</li>
+        <li>The right to correct inaccurate or incomplete data</li>
+        <li>The right to erasure ("right to be forgotten") in certain conditions</li>
+        <li>The right to restrict processing</li>
+        <li>The right to data portability</li>
+        <li>The right to object to processing, including for direct marketing</li>
+      </ul>
+      <p>We respect these rights and provide mechanisms to exercise them. Please contact us to act on your rights.</p>
+
+      <h3>California Privacy Rights</h3>
+      <p>If you are a California resident, you have specific rights under the California Consumer Privacy Act ("CCPA"):</p>
+      <ul>
+        <li>Right to know about personal information collected, used, shared, or sold</li>
+        <li>Right to delete personal information, subject to exceptions</li>
+        <li>Right to opt-out of the sale of your personal information</li>
+        <li>Right to non-discrimination for exercising your privacy rights</li>
+      </ul>
+      <p>We do not sell personal information and take steps to honor these rights. To make requests, contact us using the details provided.</p>
+
+      <h3>Data Transfer Mechanisms</h3>
+      <p>Where international data transfers occur, we implement appropriate safeguards such as Standard Contractual Clauses with our service providers to ensure your data remains protected consistent with applicable laws.</p>
+
+      <h3>Retention and Deletion Policies</h3>
+      <p>We retain data only as long as necessary for the purposes identified or to comply with legal obligations. When no longer needed, personal data is securely deleted or anonymized. Specific retention periods depend on data type and context.</p>
+
+      <h3>Children’s Privacy Additional</h3>
+      <p>We urge parents and guardians to supervise their children’s internet use and to contact us if they believe personal data of a child has been collected inappropriately.</p>
+
+      <h3>Website Security Features</h3>
+      <p>Our website implements HTTPS encryption ensuring secure transmission of your data. We employ regular security scans and follow best practices to mitigate risks.</p>
+
+      <h3>Accessibility of Privacy Policy</h3>
+      <p>We are committed to ensuring our privacy policy is accessible to all users and invite feedback or requests for alternative formats.</p>
+
+      <p><em>Thank you for trusting Frosty Garden Pruning with your garden care and your privacy. We strive to maintain transparency, security, and respect in all that we do.</em></p>
+    </section>
+  </main>
+  <footer id="contact" aria-label="Contact information">
+    <div class="container">
+      <address>400 Broome St, New York, NY 10013, USA</address>
+      <div class="contact-info">Phone: +1 (212) 555-0199</div>
+      <p>&copy; 2024 Frosty Garden Pruning. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
