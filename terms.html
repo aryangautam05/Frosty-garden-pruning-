@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms and Conditions - Frosty Garden Pruning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-text-primary: #374151;
+      --color-text-secondary: #6b7280;
+      --color-accent: #2d6a4f;
+      --color-accent-light: #95d5b2;
+      --color-accent-dark: #1b4332;
+      --color-frosty-blue: #a8dadc;
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+
+      --radius: 0.75rem;
+      --shadow-light: rgba(0,0,0,0.08);
+      --shadow-hover: rgba(45,106,79,0.35);
+      --transition-speed: 0.3s;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: color var(--transition-speed);
+    }
+
+    a:hover, a:focus {
+      color: var(--color-accent-dark);
+      outline: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background-color: var(--color-bg);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 1000;
+      box-shadow: 0 2px 4px var(--shadow-light);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 1.75rem;
+      color: var(--color-accent-dark);
+      user-select: none;
+      font-family: var(--font-heading);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      color: var(--color-text-primary);
+      align-items: center;
+    }
+
+    .nav-links a {
+      padding: 0.4rem 0;
+      position: relative;
+      font-size: 1rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--color-accent);
+      transition: width var(--transition-speed);
+      border-radius: 2px;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus::after {
+      width: 100%;
+    }
+
+    main {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem 6rem;
+      background: linear-gradient(135deg, var(--color-frosty-blue) 0%, var(--color-accent-light) 100%);
+      border-radius: var(--radius);
+      margin-bottom: 4rem;
+      box-shadow: 0 8px 16px rgba(45,106,79,0.15);
+      color: var(--color-accent-dark);
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 3.5rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2rem;
+      color: var(--color-accent-dark);
+    }
+
+    /* Terms Content */
+    .terms-content {
+      max-width: 960px;
+      margin: 0 auto 5rem;
+      color: var(--color-text-primary);
+    }
+
+    .terms-content h2 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--color-accent-dark);
+      margin-top: 3rem;
+    }
+
+    .terms-content h3 {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+      color: var(--color-accent-dark);
+    }
+
+    .terms-content p,
+    .terms-content ul,
+    .terms-content li {
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+      text-align: justify;
+      color: var(--color-text-secondary);
+    }
+
+    .terms-content ul {
+      padding-left: 1.5rem;
+      list-style-type: disc;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #f9fafb;
+      padding: 2rem 1rem;
+      text-align: center;
+      color: var(--color-text-secondary);
+      font-size: 1rem;
+      user-select: none;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    footer address {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-accent-dark);
+      margin-top: 0.5rem;
+    }
+
+    footer .contact-info {
+      margin-top: 0.75rem;
+      font-weight: 600;
+      color: var(--color-accent-dark);
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .terms-content h2 {
+        font-size: 2rem;
+      }
+
+      .terms-content h3 {
+        font-size: 1.375rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary navigation">
+        <div class="logo" tabindex="0">Frosty<span style="color:var(--color-accent)">Garden</span></div>
+        <div class="nav-links">
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero" role="banner" aria-label="Terms and Conditions">
+      <h1>Terms and Conditions</h1>
+      <p>Welcome to Frosty Garden Pruning. These terms and conditions outline the rules and regulations for the use of our website and services.</p>
+    </section>
+    <section class="terms-content" aria-label="Terms and Conditions Content">
+      <h2>1. Introduction</h2>
+      <p>Welcome to Frosty Garden Pruning (“Company”, “we”, “our”, “us”). By accessing our website and/or using our services, you agree to be bound by these Terms and Conditions (“Terms”), full compliance with all applicable laws and regulations, and acknowledge these Terms govern your relationship with us.</p>
+      <p>If you do not agree with any part of these terms, you must not use our website or services.</p>
+
+      <h2>2. Definitions</h2>
+      <p>“Services” refer to garden pruning and related maintenance services offered by Frosty Garden Pruning.</p>
+      <p>“User”, “you”, or “customer” refers to anyone accessing the website or using our services.</p>
+
+      <h2>3. Use of Services</h2>
+      <p>When you use our services, you represent that you are at least 18 years old and legally capable of entering agreements.</p>
+      <p>Services are provided based on stated prices, availability, and terms. We reserve the right to refuse service for any reason and to modify or discontinue services without prior notice.</p>
+
+      <h2>4. Booking and Payment</h2>
+      <p>Bookings may be made through our website, phone, or email. You agree to provide accurate and complete information when making a booking.</p>
+      <p>Prices are subject to change and may vary based on garden size, condition, and complexity.</p>
+      <p>Payments must be made according to agreed terms, and late payments may incur additional charges.</p>
+
+      <h2>5. Service Warranty and Disclaimer</h2>
+      <p>We strive to provide high quality and professional services. However, we do not guarantee specific results and disclaim all warranties, expressed or implied, about the performance or outcome of services.</p>
+      <p>We are not responsible for unforeseen damage due to natural causes, existing plant health conditions, or other external factors beyond our control.</p>
+
+      <h2>6. Liability</h2>
+      <p>Frosty Garden Pruning shall not be liable for any indirect, incidental, consequential, or punitive damages arising from the use of our services or website.</p>
+      <p>Our maximum liability is limited to the amount paid by you for the specific service provided.</p>
+
+      <h2>7. Intellectual Property</h2>
+      <p>All content on this website, including text, images, logos, and designs, is the intellectual property of Frosty Garden Pruning or used under license.</p>
+      <p>You may not reproduce, distribute, or use this content without our express written permission.</p>
+
+      <h2>8. Privacy</h2>
+      <p>Your use of our website and services is also governed by our Privacy Policy. By using our services, you consent to the collection and use of information as described in that policy.</p>
+
+      <h2>9. Termination and Suspension</h2>
+      <p>We reserve the right to suspend or terminate your access to our services at our discretion, including if you violate these terms or for safety reasons.</p>
+
+      <h2>10. Governing Law</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of the State of New York, USA.</p>
+      <p>Any disputes shall be resolved exclusively in the courts located within New York.</p>
+
+      <h2>11. Force Majeure</h2>
+      <p>We are not responsible for delays or failures in performance due to causes beyond our reasonable control, including but not limited to acts of God, natural disasters, pandemics, government restrictions, or labor disputes.</p>
+
+      <h2>12. Amendments</h2>
+      <p>We reserve the right to modify or update these Terms at any time. Changes will be posted on this page with the updated date.</p>
+      <p>Your continued use after changes constitutes acceptance.</p>
+
+      <h2>13. User Conduct</h2>
+      <p>You agree not to use our website or services to:</p>
+      <ul>
+        <li>Engage in unlawful or fraudulent activities;</li>
+        <li>Transmit harmful or malicious code;</li>
+        <li>Interfere with service functionality;</li>
+        <li>Harass or defame our staff or other users;</li>
+        <li>Violate intellectual property rights.</li>
+      </ul>
+
+      <h2>14. Customer Responsibilities</h2>
+      <p>To ensure safe and effective service, customers should:</p>
+      <ul>
+        <li>Provide clear and accurate information about the property;</li>
+        <li>Ensure safe access to the garden or relevant areas;</li>
+        <li>Inform us of any hazards or sensitive plants;</li>
+        <li>Follow recommendations or maintenance advice given by our team.</li>
+      </ul>
+
+      <h2>15. Limitation of Actions</h2>
+      <p>Any claims or disputes must be brought within one year after the event giving rise to the claim.</p>
+
+      <h2>16. Third-Party Services</h2>
+      <p>We may use third-party providers for payment processing, communication, and other aspects. Their terms and policies apply to such services.</p>
+
+      <h2>17. Accessibility</h2>
+      <p>We are committed to accessible design and compliance with laws regarding accessibility for persons with disabilities.</p>
+
+      <h2>18. Contact Information</h2>
+      <p>If you have questions about these Terms, please contact us:</p>
+      <p><strong>Email:</strong> support@frostygardenpruning.com</p>
+      <p><strong>Phone:</strong> +1 (212) 555-0199</p>
+      <p><strong>Address:</strong> 400 Broome St, New York, NY 10013, USA</p>
+
+      <h2>Detailed Sections for Extended Content</h2>
+
+      <h3>Booking Changes and Cancellations</h3>
+      <p>Clients may request changes or cancellations to bookings with reasonable notice. We reserve the right to charge fees for late cancellations or no-shows.</p>
+      <p>In case of inclement weather or unforeseen events, we may reschedule appointments as appropriate.</p>
+
+      <h3>Pricing and Quotations</h3>
+      <p>All price quotations are estimates and subject to change based on final assessment of garden size, condition, or requested services.</p>
+      <p>Additional services requested outside the scope of the initial agreement will require separate pricing and approval.</p>
+
+      <h3>Service Limitations</h3>
+      <p>Our services focus on pruning and garden maintenance. We do not provide landscaping design, pest control, or structural tree removal unless otherwise agreed.</p>
+      <p>We reserve the right to decline work that poses excessive safety risks or violates regulations.</p>
+
+      <h3>Health and Safety</h3>
+      <p>Our team adheres to strict health and safety protocols to protect clients, staff, and property. Please inform us of any relevant health or safety concerns prior to service delivery.</p>
+
+      <h3>Indemnification</h3>
+      <p>You agree to indemnify and hold Frosty Garden Pruning harmless from any claims arising from your misuse of the services or violation of these Terms.</p>
+
+      <h3>Feedback and Reviews</h3>
+      <p>We welcome feedback to improve our services. Please provide honest reviews but refrain from defamatory or false statements.</p>
+
+      <h3>Severability</h3>
+      <p>If any provision of these Terms is found unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary so that the Terms remain in full force and effect.</p>
+
+      <h3>Entire Agreement</h3>
+      <p>These Terms constitute the entire agreement between you and Frosty Garden Pruning regarding your use of our website and services, superseding any prior agreements.</p>
+
+      <h2>Thank you for choosing Frosty Garden Pruning</h2>
+      <p>We appreciate your business and strive to provide professional, quality service to meet your garden care needs with integrity and respect.</p>
+    </section>
+  </main>
+  <footer id="contact" aria-label="Contact information">
+    <div class="container">
+      <address>400 Broome St, New York, NY 10013, USA</address>
+      <div class="contact-info">Phone: +1 (212) 555-0199</div>
+      <p>&copy; 2024 Frosty Garden Pruning. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
